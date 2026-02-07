@@ -205,3 +205,17 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+# ChromaDB storage
+chroma/
+
+# Local test scripts
+test_*.py
+create_sample*.py
+insert_test_guideline.py
+reset_symptom_collection.py
+
+# Large datasets (optional if huge)
+data/Healthcare.json
+data/healthcare_sample.json
