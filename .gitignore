@@ -208,7 +208,8 @@ __marimo__/
 
 
 # ChromaDB storage
-chroma/
+chroma_db/
+
 
 # Local test scripts
 test_*.py
