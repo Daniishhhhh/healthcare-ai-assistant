@@ -1,6 +1,76 @@
+# ==============================
+# ENV & SECRETS
+# ==============================
 .env
+.env.*
+*.env
+
+# ==============================
+# PYTHON
+# ==============================
 __pycache__/
-chroma_db/
-exports/
+*.pyc
+*.pyo
+*.pyd
 *.log
+*.sqlite3
+
+# ==============================
+# VIRTUAL ENVIRONMENTS
+# ==============================
+.venv/
 venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# ==============================
+# CHROMA / VECTOR DB STORAGE
+# ==============================
+chroma_db/
+chroma/
+exports/
+
+# ==============================
+# DATA FILES (OPTIONAL LARGE)
+# ==============================
+data/*.json
+data/*.csv
+data/*.parquet
+
+# ==============================
+# IDE / EDITOR
+# ==============================
+.vscode/
+.idea/
+*.code-workspace
+
+# ==============================
+# TEST / LOCAL SCRIPTS
+# ==============================
+test_*.py
+create_sample*.py
+insert_test_guideline.py
+reset_symptom_collection.py
+
+# ==============================
+# OS FILES
+# ==============================
+.DS_Store
+Thumbs.db
+
+# ==============================
+# BUILD / CACHE
+# ==============================
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+cython_debug/
+
+# ==============================
+# DOCUMENTATION BUILD
+# ==============================
+site/
