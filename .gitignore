@@ -54,23 +54,29 @@ create_sample*.py
 insert_test_guideline.py
 reset_symptom_collection.py
 
-# ==============================
-# OS FILES
-# ==============================
+
+=======
+# Large datasets (optional if huge)
+data/Healthcare.json
+data/healthcare_sample.json
+# Python
+venv/
+.venv/
+.venv311/
+__pycache__/
+*.pyc
+
+# Environment
+.env
+
+# Database
+chroma_db/
+
+# IDE
+.vscode/
+*.code-workspace
+
+# OS
 .DS_Store
 Thumbs.db
-
-# ==============================
-# BUILD / CACHE
-# ==============================
-.mypy_cache/
-.pytest_cache/
-.ruff_cache/
-.pyre/
-.pytype/
-cython_debug/
-
-# ==============================
-# DOCUMENTATION BUILD
-# ==============================
-site/
+>>>>>>> 1347653 (Complete Swasthya Setu AI demo with frontend, voice assistant, schemes, helplines and improved RAG pipeline)

@@ -7,29 +7,35 @@ client = AzureOpenAI(
     api_version="2024-02-15-preview"
 )
 
-def generate_llm_response(user_query: str, context: str):
+
+def generate_llm_response(user_query: str, prompt: str):
 
     system_prompt = """
-You are a healthcare assistant.
+You are a helpful healthcare AI assistant designed for rural communities.
 
-STRICT RULES:
-- Use ONLY the provided context.
-- Do NOT add new symptoms.
-- Do NOT add new medical advice beyond the context.
-- Do NOT diagnose.
-- Do NOT prescribe medication.
-- If context does not mention something, do not invent it.
-- Keep response short and factual.
+GOALS:
+- Provide safe medical guidance
+- Explain possible causes clearly
+- Suggest simple home care if safe
+- Mention when to consult a doctor
+- Mention emergency signs if relevant
+
+SAFETY RULES:
+- Do NOT diagnose
+- Do NOT prescribe medicines
+- Encourage professional medical consultation when needed
+- Keep language simple and reassuring
+
+Always include a short disclaimer.
 """
-
 
     response = client.chat.completions.create(
         model=CHAT_DEPLOYMENT,
         messages=[
             {"role": "system", "content": system_prompt},
-            {"role": "user", "content": f"Context:\n{context}\n\nUser Query:\n{user_query}"}
+            {"role": "user", "content": prompt}
         ],
-        temperature=0.2
+        temperature=0.4
     )
 
     return response.choices[0].message.content

@@ -1,0 +1,252 @@
+[
+  {
+    "name": "National Emergency",
+    "number": "112",
+    "description": "Police, Fire, Ambulance"
+  },
+  {
+    "name": "Ambulance Service",
+    "number": "108",
+    "description": "Emergency medical transport (National Health Mission)"
+  },
+  {
+    "name": "Health Ministry Helpline",
+    "number": "1075",
+    "description": "Ministry of Health & Family Welfare"
+  },
+  {
+    "name": "COVID-19 Helpline",
+    "number": "1075",
+    "description": "Government COVID assistance"
+  },
+  {
+    "name": "National Health Helpline",
+    "number": "104",
+    "description": "General health consultation (NHM)"
+  },
+  {
+    "name": "Mental Health Rehabilitation Helpline (KIRAN)",
+    "number": "1800-599-0019",
+    "description": "24/7 mental health support"
+  },
+  {
+    "name": "HIV/AIDS Helpline (NACO)",
+    "number": "1097",
+    "description": "National AIDS Control Organisation support"
+  },
+  {
+    "name": "Tuberculosis Helpline (Nikshay)",
+    "number": "1800-11-6666",
+    "description": "National TB Elimination Programme"
+  },
+  {
+    "name": "National Tobacco Quitline",
+    "number": "1800-11-2356",
+    "description": "Tobacco cessation support"
+  },
+  {
+    "name": "Women Health Helpline",
+    "number": "181",
+    "description": "Women health & protection support"
+  },
+  {
+    "name": "Child Health Helpline",
+    "number": "1098",
+    "description": "Child health & emergency assistance"
+  },
+  {
+    "name": "National Dengue Helpline",
+    "number": "1075",
+    "description": "Vector-borne disease support"
+  },
+  {
+    "name": "Malaria Control Helpline",
+    "number": "1075",
+    "description": "National Vector Borne Disease Control Programme"
+  },
+  {
+    "name": "Leprosy Helpline",
+    "number": "1075",
+    "description": "National Leprosy Eradication Programme"
+  },
+  {
+    "name": "Cancer Helpline (AIIMS Delhi)",
+    "number": "1800-11-0031",
+    "description": "National cancer support information"
+  },
+  {
+    "name": "Diabetes Support Helpline",
+    "number": "104",
+    "description": "Lifestyle disease consultation"
+  },
+  {
+    "name": "Hypertension Support Helpline",
+    "number": "104",
+    "description": "Blood pressure consultation"
+  },
+  {
+    "name": "Stroke Emergency",
+    "number": "108",
+    "description": "Immediate stroke ambulance support"
+  },
+  {
+    "name": "Heart Attack Emergency",
+    "number": "108",
+    "description": "Cardiac emergency transport"
+  },
+  {
+    "name": "Poison Control Helpline",
+    "number": "1066",
+    "description": "National Poisons Information Centre"
+  },
+  {
+    "name": "National Organ Transplant Helpline",
+    "number": "1800-11-4770",
+    "description": "NOTTO support"
+  },
+  {
+    "name": "Jan Aushadhi Helpline",
+    "number": "1800-180-8080",
+    "description": "Affordable medicine information"
+  },
+  {
+    "name": "Ayushman Bharat Helpline",
+    "number": "14555",
+    "description": "PMJAY health insurance support"
+  },
+  {
+    "name": "National Blood Bank Helpline",
+    "number": "104",
+    "description": "Blood availability information"
+  },
+  {
+    "name": "Immunization Helpline",
+    "number": "1075",
+    "description": "Universal Immunization Programme"
+  },
+  {
+    "name": "Hepatitis Helpline",
+    "number": "1075",
+    "description": "National Viral Hepatitis Control Programme"
+  },
+  {
+    "name": "Rabies Helpline",
+    "number": "104",
+    "description": "Animal bite emergency consultation"
+  },
+  {
+    "name": "Epilepsy Support Line",
+    "number": "104",
+    "description": "Neurological consultation support"
+  },
+  {
+    "name": "Mental Depression Support",
+    "number": "1800-599-0019",
+    "description": "KIRAN mental health service"
+  },
+  {
+    "name": "Suicide Prevention Helpline",
+    "number": "9152987821",
+    "description": "National suicide prevention support"
+  },
+  {
+    "name": "National Blindness Control Helpline",
+    "number": "1075",
+    "description": "Vision care program"
+  },
+  {
+    "name": "Asthma Support",
+    "number": "104",
+    "description": "Respiratory consultation"
+  },
+  {
+    "name": "COPD Support",
+    "number": "104",
+    "description": "Chronic lung disease consultation"
+  },
+  {
+    "name": "Kidney Disease Support",
+    "number": "104",
+    "description": "Chronic kidney care consultation"
+  },
+  {
+    "name": "Dialysis Support Scheme",
+    "number": "14555",
+    "description": "PM National Dialysis Programme"
+  },
+  {
+    "name": "National Cancer Screening Helpline",
+    "number": "1075",
+    "description": "NPCDCS programme"
+  },
+  {
+    "name": "Arthritis Support",
+    "number": "104",
+    "description": "Chronic joint disease consultation"
+  },
+  {
+    "name": "Obesity Counseling",
+    "number": "104",
+    "description": "Lifestyle management guidance"
+  },
+  {
+    "name": "Nutrition Helpline",
+    "number": "1800-180-1104",
+    "description": "POSHAN Abhiyaan support"
+  },
+  {
+    "name": "National Drug De-addiction Helpline",
+    "number": "1800-11-0031",
+    "description": "Substance abuse support"
+  },
+  {
+    "name": "National Flu Helpline",
+    "number": "1075",
+    "description": "Influenza & respiratory disease info"
+  },
+  {
+    "name": "National Measles Helpline",
+    "number": "1075",
+    "description": "Immunization & outbreak support"
+  },
+  {
+    "name": "National Polio Helpline",
+    "number": "1075",
+    "description": "Pulse Polio Programme"
+  },
+  {
+    "name": "National TB Drug Support",
+    "number": "1800-11-6666",
+    "description": "Nikshay TB medicine support"
+  },
+  {
+    "name": "National Vector Disease Control",
+    "number": "1075",
+    "description": "Dengue, malaria, chikungunya support"
+  },
+  {
+    "name": "AIIMS Emergency",
+    "number": "011-26594404",
+    "description": "AIIMS Delhi emergency desk"
+  },
+  {
+    "name": "Central Government Health Scheme",
+    "number": "1800-208-8900",
+    "description": "CGHS health services"
+  },
+  {
+    "name": "Janani Shishu Suraksha Programme",
+    "number": "102",
+    "description": "Pregnancy & newborn transport"
+  },
+  {
+    "name": "National Mental Health Programme",
+    "number": "1800-599-0019",
+    "description": "Mental health services"
+  },
+  {
+    "name": "National Health Authority",
+    "number": "14555",
+    "description": "Government health scheme support"
+  }
+]

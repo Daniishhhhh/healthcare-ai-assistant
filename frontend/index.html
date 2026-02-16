@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Swasthya Setu AI</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">🩺 Swasthya Setu AI</div>
+
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="schemes.html">Schemes</a>
+        <a href="helplines.html">Helplines</a>
+        <a href="#emergency">Emergency</a>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-center">
+
+        <!-- Avatar -->
+        <div class="doctor-container">
+            <img id="doctorAvatar"
+                 src="https://cdn-icons-png.flaticon.com/512/387/387561.png"
+                 class="doctor-avatar"
+                 alt="AI Doctor">
+        </div>
+
+        <h1>
+            AI Powered <span>Healthcare Assistant</span>
+        </h1>
+
+        <p>
+            Multilingual medical guidance with safety-first intelligence for everyone.
+        </p>
+
+        <!-- Chat -->
+        <div class="chat-box">
+
+            <input id="userInput" placeholder="Describe your symptoms..." />
+
+            <button class="mic-btn" onclick="startVoice()">🎤</button>
+
+            <button onclick="sendMessage()">Check</button>
+
+        </div>
+
+        <div class="tagline">
+            💡 Try: fever, headache, chest pain, cough
+        </div>
+
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button onclick="setLanguage('en')" class="lang-btn">🇬🇧 English</button>
+            <button onclick="setLanguage('hi')" class="lang-btn">🇮🇳 हिंदी</button>
+        </div>
+
+        <!-- Voice Controls -->
+        <div class="voice-controls">
+
+            <button id="voiceToggleBtn"
+                    class="voice-btn"
+                    onclick="toggleVoice()">
+                🔇 Voice OFF
+            </button>
+
+            <button class="voice-btn stop-btn"
+                    onclick="stopSpeech()">
+                ⏹ Stop
+            </button>
+
+            <button class="voice-btn"
+                    onclick="speakLast()">
+                🔊 Speak
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- RESPONSE -->
+<section class="response-section">
+
+    <div id="responseCard" class="response-card hidden">
+
+        <div id="riskBadge" class="risk-badge">LOW</div>
+
+        <h3>AI Response</h3>
+
+        <p id="aiMessage"></p>
+
+        <div class="confidence">
+
+            <div class="confidence-bar">
+                <div id="confidenceFill"></div>
+            </div>
+
+            <span id="confidenceText"></span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- EMERGENCY -->
+<section id="emergency" class="emergency-section">
+
+    <h2>🚨 Emergency Help</h2>
+
+    <p>If symptoms are severe, contact emergency services immediately.</p>
+
+    <div class="emergency-buttons">
+
+        <a href="tel:108" class="emergency-btn critical">
+            🚑 Call 108 Ambulance
+        </a>
+
+        <a href="helplines.html" class="emergency-btn">
+            📞 View Helplines
+        </a>
+
+    </div>
+
+</section>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>

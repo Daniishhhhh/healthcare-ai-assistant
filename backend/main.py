@@ -1,10 +1,42 @@
+
+from backend.models.response_models import ChatRequest, ChatResponse
+from backend.services.rag_services import generate_safe_response, generate_scheme_info
+
+
 from fastapi import FastAPI
-from backend.routes.chat import router as chat_router
+from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI(title="Healthcare AI Assistant")
+app = FastAPI(
+    title="Healthcare AI Chatbot ",
+    description="Safety-first multilingual healthcare assistant",
+    version="1.0"
+)
 
-app.include_router(chat_router)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 
 @app.get("/")
-def health_check():
-    return {"status": "Backend running"}
+def root():
+    return {"message": "Healthcare AI Backend Running"}
+
+
+@app.post("/chat", response_model=ChatResponse)
+def chat_endpoint(request: ChatRequest):
+    return generate_safe_response(request.query)
+
+
+@app.post("/scheme")
+def scheme_endpoint(request: ChatRequest):
+    result = generate_scheme_info(request.query)
+
+    return {
+        "status": "SCHEME_INFO",
+        "scheme_data": result
+    }

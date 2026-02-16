@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Health Schemes | AI ChatBot</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e8f5f9, #ffffff);
+    margin: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 20px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 15px 25px;
+    border: none;
+    background: #00a8a8;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.search-box button:hover {
+    background: #008c8c;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #00a8a8;
+}
+
+.label {
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.loading {
+    display: none;
+    font-weight: 600;
+    color: #555;
+}
+
+</style>
+
+</head>
+
+<body class="page">
+
+
+<nav class="navbar">
+    <div class="logo">🩺 AI ChatBot </div>
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="schemes.html">Schemes</a>
+        <a href="helplines.html">Helplines</a>
+    </div>
+</nav>
+
+
+<div class="container">
+
+    <h2>Government Health Schemes</h2>
+
+    <div class="search-box">
+        <input id="schemeInput" placeholder="Enter scheme name (e.g., Ayushman Bharat)">
+        <button onclick="getScheme()">Search</button>
+    </div>
+
+    <div id="loading" class="loading">Loading scheme information...</div>
+
+    <div id="schemeCard" class="scheme-card">
+
+        <h3 id="schemeTitle"></h3>
+
+        <div class="label">Description</div>
+        <p id="desc"></p>
+
+        <div class="label">Eligibility</div>
+        <p id="elig"></p>
+
+        <div class="label">Benefits</div>
+        <p id="benefits"></p>
+
+        <div class="label">Official Source</div>
+        <p id="source"></p>
+
+        <div class="label">Disclaimer</div>
+        <p id="disc"></p>
+
+    </div>
+
+</div>
+
+
+<script>
+
+async function getScheme() {
+
+    const query = document.getElementById("schemeInput").value;
+
+    if (!query) return;
+
+    document.getElementById("loading").style.display = "block";
+    document.getElementById("schemeCard").style.display = "none";
+
+    try {
+
+        const response = await fetch("http://127.0.0.1:8000/scheme", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ query: query })
+        });
+
+        const data = await response.json();
+
+        const scheme = data.scheme_data;
+
+        document.getElementById("schemeTitle").innerText = query;
+        document.getElementById("desc").innerText = scheme.description;
+        document.getElementById("elig").innerText = scheme.eligibility;
+        document.getElementById("benefits").innerText = scheme.benefits;
+        document.getElementById("source").innerText = scheme.official_source;
+        document.getElementById("disc").innerText = scheme.disclaimer;
+
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("schemeCard").style.display = "block";
+
+    } catch (error) {
+
+        document.getElementById("loading").innerText = "Error loading data.";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

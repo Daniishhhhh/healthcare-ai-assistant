@@ -1,20 +1,30 @@
-EMERGENCY_KEYWORDS = [
-    "chest pain",
-    "shortness of breath",
-    "unconscious",
-    "severe bleeding",
-    "stroke",
-    "heart attack",
-    "suicidal",
-    "not breathing"
-]
+def check_emergency(query: str):
 
-def check_emergency(user_query: str):
+    emergency_keywords = [
+        "chest pain",
+        "severe chest pain",
+        "radiating pain",
+        "left arm pain",
+        "heart attack",
+        "unconscious",
+        "difficulty breathing",
+        "severe bleeding",
+        "stroke",
+        "seizure"
+    ]
 
-    query_lower = user_query.lower()
+    query_lower = query.lower()
 
-    for keyword in EMERGENCY_KEYWORDS:
+    for keyword in emergency_keywords:
         if keyword in query_lower:
-            return True
+            return {
+                "status": "EMERGENCY",
+                "risk_level": "CRITICAL",
+                "risk_color": "RED",
+                "confidence": 100.0,
+                "message": "Your symptoms indicate a possible medical emergency. Please seek immediate medical attention or call your local emergency number immediately.",
+                "confidence_explanation": "Emergency keyword match detected.",
+                "sources": []
+            }
 
-    return False
+    return None

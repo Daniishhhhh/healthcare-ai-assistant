@@ -1,0 +1,542 @@
+.floating-icons {
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 30px;
+    opacity: 0.7;
+}
+
+.icon {
+    animation: float 4s ease-in-out infinite;
+}
+
+.icon:nth-child(2) { animation-delay: 1s; }
+.icon:nth-child(3) { animation-delay: 2s; }
+.icon:nth-child(4) { animation-delay: 3s; }
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: rgba(255,255,255,0.15);
+    padding: 25px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.feature-card p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+
+.emergency-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.emergency-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.emergency-btn {
+    background: #22c55e;
+    padding: 14px 25px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.emergency-btn:hover {
+    background: #16a34a;
+}
+
+.emergency-btn.critical {
+    background: #dc2626;
+}
+
+.emergency-btn.critical:hover {
+    background: #b91c1c;
+}
+
+
+.mic-btn {
+    background: #0ea5e9;
+}
+
+.mic-btn:hover {
+    background: #0284c7;
+}
+
+
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0B6E99, #14B8A6);
+    color: #ffffff;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.chat-box button:first-of-type {
+    background: #0ea5e9;
+}
+
+.chat-box button:first-of-type:hover {
+    background: #0284c7;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 40px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.menu a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: #22C55E;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-left {
+    text-align: center;
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: #22C55E;
+}
+
+
+/* ================= CHAT ================= */
+
+.chat-box {
+    margin-top: 30px;
+    display: flex;
+    gap: 12px;
+}
+
+.chat-box input {
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.chat-box button {
+    background: #22C55E;
+    border: none;
+    padding: 15px 28px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.chat-box button:hover {
+    background: #16a34a;
+}
+
+
+/* ================= RESPONSE ================= */
+
+.response-card {
+    background: white;
+    color: #1a1a1a;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 18px;
+    max-width: 650px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* ================= RISK BADGE ================= */
+
+.risk-badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+
+/* ================= CONFIDENCE ================= */
+
+.confidence-bar {
+    background: #e5e5e5;
+    height: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#confidenceFill {
+    height: 10px;
+    width: 0%;
+    border-radius: 10px;
+    background: #22C55E;
+}
+
+
+/* ================= PAGE CONTENT ================= */
+
+.page {
+    padding: 40px;
+    text-align: center;
+}
+
+
+/* ================= HELPLINE ================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.card {
+    background: rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 22px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,0.18);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.number {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 10px 0;
+    color: #4ade80;
+}
+
+.desc {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.call-btn {
+    margin-top: 12px;
+    display: inline-block;
+    background: #22c55e;
+    color: white;
+    padding: 9px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.call-btn:hover {
+    background: #16a34a;
+}
+
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    text-decoration: none;
+}
+.scheme-card {
+
+    background: white;
+    color: #1a1a1a;
+
+    padding: 25px;
+    border-radius: 14px;
+
+    max-width: 700px;
+    margin: 30px auto;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+}
+
+.scheme-card h3 {
+    margin-top: 0;
+    color: #0B6E99;
+}
+
+.scheme-card p {
+    line-height: 1.6;
+}
+
+.scheme-card a {
+    color: #0B6E99;
+    font-weight: 600;
+}
+
+/* ================= SCHEMES PAGE FIX ================= */
+
+.scheme-card {
+    background: white;
+    color: #1f2937;
+    padding: 25px;
+    border-radius: 18px;
+    margin-top: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.scheme-card h2 {
+    color: #0B6E99;
+    margin-bottom: 10px;
+}
+
+.scheme-card h4 {
+    margin-top: 15px;
+    color: #111827;
+}
+
+.scheme-card p {
+    color: #374151;
+    line-height: 1.6;
+}
+
+.scheme-card a {
+    color: #0B6E99;
+    font-weight: 600;
+}
+
+/* ================= SCHEMES PAGE ================= */
+
+.page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0B6E99, #14B8A6);
+    color: white;
+    padding-bottom: 60px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    color: #111;
+}
+
+.scheme-card {
+    background: white;
+    color: #1f2937;
+    padding: 25px;
+    border-radius: 18px;
+    margin-top: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ================= DOCTOR AVATAR ================= */
+
+.doctor-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.doctor-avatar {
+    width: 140px;
+    transition: transform 0.3s ease;
+}
+
+/* Talking animation */
+.doctor-avatar.talking {
+    animation: talkAnim 0.4s infinite alternate;
+}
+
+@keyframes talkAnim {
+    from {
+        transform: translateY(0px) scale(1);
+    }
+    to {
+        transform: translateY(-6px) scale(1.03);
+    }
+}
+
+/* ================= VOICE BUTTONS ================= */
+
+.voice-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.voice-btn {
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background: #6b7280;
+    color: white;
+}
+
+.voice-btn:hover {
+    opacity: 0.9;
+}
+
+.stop-btn {
+    background: #dc2626;
+}
+/* HERO CENTER FIX */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-center {
+    text-align: center;
+    max-width: 700px;
+}
+
+
+/* AVATAR */
+.doctor-container {
+    margin-bottom: 20px;
+}
+
+.doctor-avatar {
+    width: 140px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(34,197,94,0.6);
+    transition: transform 0.3s ease;
+}
+
+.doctor-avatar.talking {
+    animation: talkAnim 0.4s infinite alternate;
+}
+
+@keyframes talkAnim {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-6px); }
+}
+
+
+/* LANGUAGE BUTTONS */
+.lang-toggle {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.lang-btn {
+    background: #0ea5e9;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.lang-btn:hover {
+    background: #0284c7;
+}
+
+
+/* VOICE CONTROLS */
+.voice-controls {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.voice-btn {
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background: #6b7280;
+    color: white;
+}
+
+.stop-btn {
+    background: #dc2626;
+}
