@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nearby Hospitals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🏥 Find Hospitals Near You</h1>
+
+    <div class="location-box">
+
+        <button onclick="getUserLocation()" class="hospital-btn">
+            📍 Use My Current Location
+        </button>
+
+    </div>
+
+    <div id="hospitalResults"></div>
+
+</div>
+
+<script src="hospitals.js"></script>
+
+</body>
+</html>
+<button onclick="getUserLocation()" class="btn-primary">
+    📍 Detect My Location
+</button>
+
+<input
+    type="text"
+    id="manualLocation"
+    placeholder="Enter area (JP Nagar)"
+/>
+
+<button onclick="setManualLocation()" class="btn-secondary">
+    Use Location
+</button>
+
+<p id="locationStatus"></p>
+

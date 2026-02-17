@@ -1,7 +1,7 @@
 let speechEnabled = false;
-let currentSpeech = null;
 let selectedLang = "en";
 let lastMessage = "";
+
 
 // ================= SEND MESSAGE =================
 async function sendMessage() {
@@ -24,7 +24,7 @@ async function sendMessage() {
 
         const res = await fetch("http://127.0.0.1:8000/chat", {
             method: "POST",
-            headers: {"Content-Type": "application/json"},
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ query: input })
         });
 
@@ -48,14 +48,29 @@ async function sendMessage() {
         else
             riskBadge.style.background = "#22c55e";
 
-        if (speechEnabled) speakText(message);
-        else startAvatarTalking(false);
+
+        // 🔊 Speak if enabled
+        if (speechEnabled) {
+
+            const isHindi = /[\u0900-\u097F]/.test(message);
+
+            speakText(
+                message,
+                isHindi ? "hi" : selectedLang
+            );
+
+        } else {
+            startAvatarTalking(false);
+        }
 
     } catch (err) {
+
         aiMessage.innerText = "Server error. Please try again.";
         startAvatarTalking(false);
+
     }
 }
+
 
 
 // ================= LANGUAGE =================
@@ -64,55 +79,65 @@ function setLanguage(lang) {
 }
 
 
+
 // ================= SPEAK =================
-function speakLast() {
-    if (lastMessage) speakText(lastMessage);
-}
+function speakText(text, lang = "en") {
 
-
-function speakText(text) {
-
-    if (!("speechSynthesis" in window)) return;
+    if (!speechEnabled) return;
 
     stopSpeech();
 
     const utterance = new SpeechSynthesisUtterance(text);
 
-    utterance.lang = selectedLang === "hi" ? "hi-IN" : "en-IN";
-
     const voices = speechSynthesis.getVoices();
 
-    let voice = voices.find(v =>
-        v.lang.includes(utterance.lang) &&
-        v.name.toLowerCase().includes("female")
-    );
+    let selectedVoice = null;
 
-    if (!voice)
-        voice = voices.find(v => v.lang.includes(utterance.lang));
+    if (lang === "hi") {
 
-    if (voice)
-        utterance.voice = voice;
+        // Hindi Female priority
+        selectedVoice =
+            voices.find(v => v.lang === "hi-IN" && v.name.toLowerCase().includes("female")) ||
+            voices.find(v => v.lang === "hi-IN") ||
+            voices.find(v => v.lang.includes("hi"));
+
+        utterance.lang = "hi-IN";
+
+    } else {
+
+        // English Female priority
+        selectedVoice =
+            voices.find(v => v.lang === "en-IN" && v.name.toLowerCase().includes("female")) ||
+            voices.find(v => v.lang === "en-IN") ||
+            voices.find(v => v.lang.includes("en"));
+
+        utterance.lang = "en-IN";
+    }
+
+    if (selectedVoice) {
+        utterance.voice = selectedVoice;
+    }
+
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
 
     utterance.onstart = () => startAvatarTalking(true);
     utterance.onend = () => startAvatarTalking(false);
 
-    currentSpeech = utterance;
     speechSynthesis.speak(utterance);
 }
 
 
-window.speechSynthesis.onvoiceschanged = () => {
-    speechSynthesis.getVoices();
-};
-
 
 // ================= STOP =================
 function stopSpeech() {
+
     if (window.speechSynthesis)
         speechSynthesis.cancel();
 
     startAvatarTalking(false);
 }
+
 
 
 // ================= TOGGLE =================
@@ -123,14 +148,24 @@ function toggleVoice() {
     const btn = document.getElementById("voiceToggleBtn");
 
     if (speechEnabled) {
+
         btn.innerText = "🔊 Voice ON";
         btn.style.background = "#22c55e";
+
+        // Speak last message immediately
+        if (lastMessage) {
+            speakText(lastMessage, selectedLang);
+        }
+
     } else {
+
         btn.innerText = "🔇 Voice OFF";
         btn.style.background = "#6b7280";
         stopSpeech();
+
     }
 }
+
 
 
 // ================= VOICE INPUT =================
@@ -142,15 +177,19 @@ function startVoice() {
     }
 
     const recognition = new webkitSpeechRecognition();
+
     recognition.lang = selectedLang === "hi" ? "hi-IN" : "en-IN";
 
     recognition.start();
 
     recognition.onresult = (event) => {
+
         const transcript = event.results[0][0].transcript;
         document.getElementById("userInput").value = transcript;
+
     };
 }
+
 
 
 // ================= AVATAR =================
@@ -164,3 +203,10 @@ function startAvatarTalking(isTalking) {
     else
         avatar.classList.remove("talking");
 }
+
+
+
+// ================= VOICES LOAD FIX =================
+speechSynthesis.onvoiceschanged = () => {
+    speechSynthesis.getVoices();
+};

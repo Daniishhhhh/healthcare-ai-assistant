@@ -1,41 +1,77 @@
 from openai import AzureOpenAI
 from backend.config import AZURE_API_KEY, AZURE_ENDPOINT, CHAT_DEPLOYMENT
 
+
+# ==========================================
+# AZURE CLIENT (NO LONG RETRIES)
+# ==========================================
+
 client = AzureOpenAI(
     api_key=AZURE_API_KEY,
     azure_endpoint=AZURE_ENDPOINT,
-    api_version="2024-02-15-preview"
+    api_version="2024-02-15-preview",
+    max_retries=0   # ⭐ VERY IMPORTANT
 )
 
 
-def generate_llm_response(user_query: str, prompt: str):
+# ==========================================
+# FAST FALLBACK RESPONSE
+# ==========================================
 
-    system_prompt = """
-You are a helpful healthcare AI assistant designed for rural communities.
+def fallback_response(query: str):
 
-GOALS:
-- Provide safe medical guidance
-- Explain possible causes clearly
-- Suggest simple home care if safe
-- Mention when to consult a doctor
-- Mention emergency signs if relevant
+    return f"""
+🩺 Health Guidance for: {query}
 
-SAFETY RULES:
-- Do NOT diagnose
-- Do NOT prescribe medicines
-- Encourage professional medical consultation when needed
-- Keep language simple and reassuring
+Possible Causes:
+• Temporary body imbalance
+• Stress or fatigue
+• Mild infection or lifestyle factors
 
-Always include a short disclaimer.
+What You Can Do:
+• Rest properly
+• Drink enough water
+• Eat light nutritious food
+• Monitor symptoms
+
+When to See a Doctor:
+• Symptoms persist more than 2–3 days
+• Symptoms worsen
+• Repeated episodes occur
+
+Emergency Signs:
+• Severe pain
+• Difficulty breathing
+• Fainting
+• Chest discomfort
+
+⚠ Medical Disclaimer:
+This AI provides general health information only.
+It does NOT replace professional medical advice.
+Always consult a qualified doctor for diagnosis.
 """
 
-    response = client.chat.completions.create(
-        model=CHAT_DEPLOYMENT,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": prompt}
-        ],
-        temperature=0.4
-    )
 
-    return response.choices[0].message.content
+# ==========================================
+# MAIN RESPONSE FUNCTION
+# ==========================================
+
+def generate_llm_response(user_input: str, system_prompt: str):
+
+    try:
+
+        response = client.chat.completions.create(
+            model=CHAT_DEPLOYMENT,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_input}
+            ],
+            temperature=0.3,
+            max_tokens=500
+        )
+
+        return response.choices[0].message.content
+
+    except Exception as e:
+        print("LLM ERROR:", e)
+        return "Unable to retrieve information at the moment."

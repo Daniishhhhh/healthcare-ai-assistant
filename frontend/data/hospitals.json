@@ -1,0 +1,377 @@
+[
+  {
+    "name": "Apollo Hospitals Bannerghatta",
+    "type": "Private",
+    "area": "JP Nagar",
+    "phone": "+91 8060000000",
+    "address": "154/11 Bannerghatta Road, Bengaluru",
+    "lat": 12.8954,
+    "lng": 77.5996
+  },
+  {
+    "name": "Fortis Hospital Bannerghatta",
+    "type": "Private",
+    "area": "Bannerghatta Road",
+    "phone": "+91 8066221444",
+    "address": "154/9 Bannerghatta Road, Bengaluru",
+    "lat": 12.8980,
+    "lng": 77.5950
+  },
+  {
+    "name": "Sagar Hospitals",
+    "type": "Private",
+    "area": "Jayanagar",
+    "phone": "+91 8042978888",
+    "address": "44/54 30th Cross, Jayanagar 4th Block",
+    "lat": 12.9255,
+    "lng": 77.5938
+  },
+  {
+    "name": "Manipal Hospital Jayanagar",
+    "type": "Private",
+    "area": "Jayanagar",
+    "phone": "+91 8049044444",
+    "address": "75-76 15th Cross, Jayanagar",
+    "lat": 12.9295,
+    "lng": 77.5930
+  },
+  {
+    "name": "Apollo Clinic JP Nagar",
+    "type": "Private",
+    "area": "JP Nagar",
+    "phone": "+91 8040407070",
+    "address": "1st Phase JP Nagar",
+    "lat": 12.9064,
+    "lng": 77.5856
+  },
+  {
+    "name": "Ramakrishna Hospital",
+    "type": "Private",
+    "area": "Banashankari",
+    "phone": "+91 8026768888",
+    "address": "Banashankari 2nd Stage",
+    "lat": 12.9267,
+    "lng": 77.5463
+  },
+  {
+    "name": "BGS Gleneagles Global Hospital",
+    "type": "Private",
+    "area": "Kengeri",
+    "phone": "+91 8049494949",
+    "address": "Uttarahalli Main Road",
+    "lat": 12.9069,
+    "lng": 77.5125
+  },
+  {
+    "name": "People Tree Hospital",
+    "type": "Private",
+    "area": "Yeshwanthpur",
+    "phone": "+91 8049533333",
+    "address": "Goraguntepalya",
+    "lat": 13.0232,
+    "lng": 77.5550
+  },
+  {
+    "name": "Victoria Hospital",
+    "type": "Government",
+    "area": "KR Market",
+    "phone": "+91 8022972222",
+    "address": "KR Road",
+    "lat": 12.9635,
+    "lng": 77.5730
+  },
+  {
+    "name": "Bowring and Lady Curzon Hospital",
+    "type": "Government",
+    "area": "Shivajinagar",
+    "phone": "+91 8025511111",
+    "address": "Shivajinagar",
+    "lat": 12.9827,
+    "lng": 77.6030
+  },
+  {
+    "name": "KC General Hospital",
+    "type": "Government",
+    "area": "Malleshwaram",
+    "phone": "+91 8023456789",
+    "address": "Malleshwaram",
+    "lat": 13.0035,
+    "lng": 77.5713
+  },
+  {
+    "name": "St. John's Medical College Hospital",
+    "type": "Private",
+    "area": "Koramangala",
+    "phone": "+91 8049433333",
+    "address": "Sarjapur Road",
+    "lat": 12.9343,
+    "lng": 77.6265
+  },
+  {
+    "name": "NIMHANS",
+    "type": "Government",
+    "area": "Hosur Road",
+    "phone": "+91 8026995000",
+    "address": "Hosur Road",
+    "lat": 12.9432,
+    "lng": 77.5969
+  },
+  {
+    "name": "Jayadeva Institute of Cardiology",
+    "type": "Government",
+    "area": "Jayanagar",
+    "phone": "+91 8026534444",
+    "address": "9th Block Jayanagar",
+    "lat": 12.9196,
+    "lng": 77.5966
+  },
+  {
+    "name": "Cloudnine Hospital",
+    "type": "Private",
+    "area": "Jayanagar",
+    "phone": "+91 8044640000",
+    "address": "Jayanagar",
+    "lat": 12.9307,
+    "lng": 77.5858
+  },
+
+  {
+    "name": "Motherhood Hospital",
+    "type": "Private",
+    "area": "Banashankari",
+    "phone": "+91 8041200000",
+    "address": "Banashankari",
+    "lat": 12.9251,
+    "lng": 77.5526
+  },
+
+  {
+    "name": "Aster RV Hospital",
+    "type": "Private",
+    "area": "JP Nagar",
+    "phone": "+91 8043432010",
+    "address": "JP Nagar 1st Phase",
+    "lat": 12.9070,
+    "lng": 77.5850
+  },
+
+  {
+    "name": "Sparsh Hospital",
+    "type": "Private",
+    "area": "Yeshwanthpur",
+    "phone": "+91 8043500000",
+    "address": "Yeshwanthpur",
+    "lat": 13.0180,
+    "lng": 77.5530
+  },
+
+  {
+    "name": "Suguna Hospital",
+    "type": "Private",
+    "area": "Rajajinagar",
+    "phone": "+91 8023501234",
+    "address": "Rajajinagar",
+    "lat": 12.9901,
+    "lng": 77.5557
+  },
+
+  {
+    "name": "Prakriya Hospital",
+    "type": "Private",
+    "area": "Padmanabhanagar",
+    "phone": "+91 8026789000",
+    "address": "Padmanabhanagar",
+    "lat": 12.9173,
+    "lng": 77.5560
+  },
+
+  {
+    "name": "Greenview Medical Center",
+    "type": "Private",
+    "area": "HSR Layout",
+    "phone": "+91 8041474444",
+    "address": "HSR Layout",
+    "lat": 12.9121,
+    "lng": 77.6476
+  },
+
+  {
+    "name": "Sakra World Hospital",
+    "type": "Private",
+    "area": "Marathahalli",
+    "phone": "+91 8049632222",
+    "address": "Outer Ring Road",
+    "lat": 12.9385,
+    "lng": 77.6950
+  },
+
+  {
+    "name": "Columbia Asia Hospital Hebbal",
+    "type": "Private",
+    "area": "Hebbal",
+    "phone": "+91 8041760000",
+    "address": "Hebbal",
+    "lat": 13.0358,
+    "lng": 77.5970
+  },
+
+  {
+    "name": "Columbia Asia Hospital Yeshwanthpur",
+    "type": "Private",
+    "area": "Yeshwanthpur",
+    "phone": "+91 8041767777",
+    "address": "Yeshwanthpur",
+    "lat": 13.0212,
+    "lng": 77.5512
+  },
+
+  {
+    "name": "MS Ramaiah Memorial Hospital",
+    "type": "Private",
+    "area": "Mathikere",
+    "phone": "+91 8040574444",
+    "address": "MSR Nagar",
+    "lat": 13.0285,
+    "lng": 77.5653
+  },
+
+  {
+    "name": "Rajarajeshwari Medical College Hospital",
+    "type": "Private",
+    "area": "Kengeri",
+    "phone": "+91 8028444444",
+    "address": "Kengeri",
+    "lat": 12.8952,
+    "lng": 77.4710
+  },
+
+  {
+    "name": "ESI Hospital Rajajinagar",
+    "type": "Government",
+    "area": "Rajajinagar",
+    "phone": "+91 8023312345",
+    "address": "Rajajinagar",
+    "lat": 12.9925,
+    "lng": 77.5538
+  },
+
+  {
+    "name": "General Hospital Banashankari",
+    "type": "Government",
+    "area": "Banashankari",
+    "phone": "+91 8026600000",
+    "address": "Banashankari",
+    "lat": 12.9248,
+    "lng": 77.5442
+  },
+
+  {
+    "name": "KIMS Hospital",
+    "type": "Private",
+    "area": "Basavanagudi",
+    "phone": "+91 8045005000",
+    "address": "Basavanagudi",
+    "lat": 12.9410,
+    "lng": 77.5710
+  },
+
+  {
+    "name": "Shekhar Hospital",
+    "type": "Private",
+    "area": "Jayanagar",
+    "phone": "+91 8026601111",
+    "address": "Jayanagar",
+    "lat": 12.9270,
+    "lng": 77.5935
+  },
+
+  {
+    "name": "Shanbhag Hospital",
+    "type": "Private",
+    "area": "Basavanagudi",
+    "phone": "+91 8026644444",
+    "address": "Basavanagudi",
+    "lat": 12.9455,
+    "lng": 77.5730
+  },
+
+  {
+    "name": "Mathru Hospital",
+    "type": "Private",
+    "area": "BTM Layout",
+    "phone": "+91 8041209999",
+    "address": "BTM Layout",
+    "lat": 12.9166,
+    "lng": 77.6101
+  },
+
+  {
+    "name": "Nano Hospitals",
+    "type": "Private",
+    "area": "Uttarahalli",
+    "phone": "+91 8026755555",
+    "address": "Uttarahalli",
+    "lat": 12.9122,
+    "lng": 77.5451
+  },
+
+  {
+    "name": "ExcelCare Hospital",
+    "type": "Private",
+    "area": "Banashankari",
+    "phone": "+91 8026700000",
+    "address": "Banashankari",
+    "lat": 12.9263,
+    "lng": 77.5469
+  },
+
+  {
+    "name": "Unity Lifeline Hospital",
+    "type": "Private",
+    "area": "Malleshwaram",
+    "phone": "+91 8040204444",
+    "address": "Malleshwaram",
+    "lat": 13.0020,
+    "lng": 77.5690
+  },
+
+  {
+    "name": "Trinity Hospital",
+    "type": "Private",
+    "area": "Basavanagudi",
+    "phone": "+91 8026602222",
+    "address": "Basavanagudi",
+    "lat": 12.9440,
+    "lng": 77.5718
+  },
+
+  {
+    "name": "Vijayanagar Global Hospital",
+    "type": "Private",
+    "area": "Vijayanagar",
+    "phone": "+91 8045000000",
+    "address": "Vijayanagar",
+    "lat": 12.9719,
+    "lng": 77.5350
+  },
+
+  {
+    "name": "Narayana Multispeciality Hospital",
+    "type": "Private",
+    "area": "HSR Layout",
+    "phone": "+91 8040444444",
+    "address": "HSR Layout",
+    "lat": 12.9125,
+    "lng": 77.6470
+  },
+
+  {
+    "name": "BBMP Referral Hospital",
+    "type": "Government",
+    "area": "Jayanagar",
+    "phone": "+91 8026500000",
+    "address": "Jayanagar",
+    "lat": 12.9245,
+    "lng": 77.5930
+  }
+]

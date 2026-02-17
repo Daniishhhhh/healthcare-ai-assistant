@@ -76,7 +76,7 @@ def generate_safe_response(user_query: str):
     guideline = retrieval_result.get("guideline")
 
     context_text = ""
-    confidence = 40  # default demo confidence
+    confidence = 50  # default demo confidence
 
     if guideline:
         context_text = guideline["text"]
@@ -162,6 +162,55 @@ Query: {query}
             "description": raw_response,
             "eligibility": "",
             "benefits": "",
+            "official_source": "Refer official government portal",
+            "disclaimer": "Information may not be fully structured. Please verify officially."
+        }
+# ==========================================================
+# GOVERNMENT SCHEME INFORMATION (STRICT JSON)
+# ==========================================================
+def generate_scheme_info(query: str):
+
+    system_prompt = """
+You are an expert assistant for Indian Government Health Schemes.
+
+Return ONLY valid JSON in this format:
+
+{
+  "description": "",
+  "eligibility": "",
+  "benefits": "",
+  "official_source": ""
+}
+
+Rules:
+- Do NOT include numbering
+- Do NOT include explanations outside JSON
+- Keep text concise and factual
+- Official source should be government website if known
+- If unsure use: "Refer official government portal"
+"""
+
+    prompt = f"Provide information for scheme: {query}"
+
+    raw_response = generate_llm_response(prompt, system_prompt)
+
+    try:
+        parsed = json.loads(raw_response)
+
+        parsed["disclaimer"] = (
+            "Information based on publicly available government sources. "
+            "Please verify on official portal."
+        )
+
+        return parsed
+
+    except Exception:
+
+        # Fallback clean structure
+        return {
+            "description": raw_response,
+            "eligibility": "Refer official government portal",
+            "benefits": "Refer official government portal",
             "official_source": "Refer official government portal",
             "disclaimer": "Information may not be fully structured. Please verify officially."
         }

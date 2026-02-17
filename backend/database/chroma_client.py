@@ -1,69 +1,35 @@
-# C:\Users\danis\OneDrive\Desktop\healthcare-ai-assistant\backend\database\chroma_client.py
-
 import chromadb
+from chromadb.config import Settings
 
-try:
-    from chromadb.config import Settings
-except Exception:
-    Settings = None
+import os
 
+os.environ["ANONYMIZED_TELEMETRY"] = "False"
 
-# ==========================================
-# Persistent Storage Path
-# ==========================================
-CHROMA_PATH = "chroma_db"
+# ==============================
+# CHROMA CLIENT (Telemetry OFF)
+# ==============================
 
-
-# ==========================================
-# Create Persistent Client Safely
-# ==========================================
-def _create_client():
-    """
-    Creates a ChromaDB persistent client with safe fallbacks.
-    """
-
-    try:
-        if Settings:
-            return chromadb.PersistentClient(
-                path=CHROMA_PATH,
-                settings=Settings(
-                    anonymized_telemetry=False,
-                    allow_reset=True
-                )
-            )
-        else:
-            return chromadb.PersistentClient(path=CHROMA_PATH)
-
-    except Exception as e:
-        print("⚠️ Chroma PersistentClient failed. Falling back to in-memory client.")
-        print("Error:", e)
-
-        return chromadb.Client()
+client = chromadb.PersistentClient(
+    path="chroma_db",
+    settings=Settings(
+        anonymized_telemetry=False,
+        allow_reset=True
+    )
+)
 
 
-# Global client instance
-client = _create_client()
+# ==============================
+# COLLECTIONS
+# ==============================
 
+guideline_collection = client.get_or_create_collection(
+    name="guidelines"
+)
 
-# ==========================================
-# Collection Getter
-# ==========================================
-def get_collection(name: str):
-    """
-    Returns existing collection or creates new one.
-    """
-    return client.get_or_create_collection(name=name)
+pattern_collection = client.get_or_create_collection(
+    name="patterns"
+)
 
-
-# ==========================================
-# Delete Collection (For ingestion/testing)
-# ==========================================
-def delete_collection(name: str):
-    """
-    Deletes collection safely.
-    """
-    try:
-        client.delete_collection(name=name)
-        print(f"✅ Collection '{name}' deleted successfully.")
-    except Exception:
-        print(f"⚠️ Collection '{name}' not found.")
+case_collection = client.get_or_create_collection(
+    name="cases"
+)

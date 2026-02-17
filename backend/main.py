@@ -1,6 +1,9 @@
 
 from backend.models.response_models import ChatRequest, ChatResponse
 from backend.services.rag_services import generate_safe_response, generate_scheme_info
+import os
+os.environ["CHROMA_TELEMETRY"] = "FALSE"
+os.environ["ANONYMIZED_TELEMETRY"] = "FALSE"
 
 
 from fastapi import FastAPI
