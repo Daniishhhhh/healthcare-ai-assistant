@@ -1,87 +1,82 @@
-🏥 SWASTHYA SETU AI
+🏥 SWASTHYA SETU
+Multilingual Rural Healthcare Assistant
 
-Multilingual Rural Healthcare Assistant with Emergency Intelligence
+SWASTHYA SETU is a multilingual, AI-powered rural healthcare assistant designed to provide symptom-based health guidance, nearby hospital discovery, government health scheme awareness, and emergency escalation support.
 
-SWASTHYA SETU AI is a multilingual healthcare assistant designed to provide symptom-based guidance, government scheme awareness, hospital discovery, and emergency escalation support for rural and semi-urban communities.
-
-The system combines AI intelligence, voice interaction, and location-aware services to improve healthcare accessibility and awareness.
+The system focuses on improving healthcare accessibility for rural and semi-urban populations by leveraging AI intelligence, voice interaction, and location-aware services.
 
 🎯 Problem Statement & Goals
 
-Healthcare accessibility in India — especially in rural and underserved areas — faces major challenges:
+Rural healthcare in India faces critical challenges such as:
 
-Limited doctor availability
+Limited doctor availability at Primary Health Centres (PHCs)
 
 Language barriers for non-English speakers
 
-Lack of awareness about government schemes
-
 Delayed emergency response
+
+Lack of awareness about government healthcare schemes
 
 Difficulty locating nearby hospitals quickly
 
-Dependence on intermediaries (ASHA workers)
+Heavy dependence on ASHA workers for first-level care
 
 SWASTHYA SETU aims to bridge these gaps by offering:
 
-AI-powered symptom guidance
+Easy access to AI-based health triage
 
-Multilingual voice interaction
+Multilingual support for rural users
 
-Emergency detection with escalation
+Emergency risk detection
 
-Nearby hospital discovery with navigation
+Nearby hospital navigation
 
-Government healthcare scheme awareness
+Government scheme awareness
 
-Safety-first medical information delivery
+Safety-first medical guidance
 
-🚀 Key Features
-🤖 1. AI Symptom Guidance Chatbot
+🚀 Core Features
+🤖 AI Symptom Guidance Assistant
 
-Accepts natural language symptom queries
-
-Provides structured health guidance:
+The chatbot accepts natural language queries and provides structured medical guidance including:
 
 Possible causes
 
-Home care suggestions
+Safe home care suggestions
 
-Doctor consultation advice
+When to consult a doctor
 
-Emergency signs
+Emergency warning signs
 
-Safety guardrails prevent diagnosis or prescriptions
+Confidence score and risk level
 
-Confidence scoring system
+The system follows strict medical safety rules to prevent misuse.
 
-Risk classification (LOW / MODERATE / CRITICAL)
+🗣️ Multilingual Voice Assistant
 
-🗣️ 2. Multilingual Voice Assistant
+The assistant supports interactive voice communication:
 
-Female voice support
+Female voice output (English & Hindi)
 
-English and Hindi language modes
+Speech-to-text symptom input
 
-Speech-to-text input
-
-Text-to-speech output
+Text-to-speech responses
 
 Talking medical avatar animation
 
-Manual voice toggle (user control)
+Voice ON/OFF toggle control
 
-🚨 3. Smart Emergency Detection System
+Language switch support
 
-Improved emergency pipeline with:
+🚨 Smart Emergency Detection System
 
-Context-aware detection (avoids false alarms like cough)
+The emergency pipeline intelligently detects high-risk situations while avoiding false alarms.
 
-Critical symptom recognition:
+Recognizes symptoms like:
 
 Chest pain
 
-Stroke symptoms
+Stroke indicators
 
 Unconsciousness
 
@@ -89,41 +84,45 @@ Severe bleeding
 
 Breathing difficulty
 
-Instant emergency instructions
+Seizures
 
-Ambulance helpline integration
+Provides:
 
-🏥 4. Hospital Locator with Navigation (NEW ⭐)
+Immediate emergency guidance
 
-One of the most impressive features for demo.
+Ambulance contact instructions
 
-Capabilities:
+Critical risk classification
 
-Detect user GPS location
+🏥 Hospital Locator with Navigation ⭐
 
-Manual location entry (JP Nagar, Banashankari, etc.)
+One of the most impactful features of the system.
 
-Nearest hospitals ranking using distance calculation
+Users can:
 
-Government + private hospitals dataset
+Detect current GPS location
 
-Google Maps navigation button
+Enter location manually (JP Nagar, Banashankari, etc.)
 
-Driving route guidance from user location
+Find nearest hospitals
+
+View contact details and address
+
+Navigate using Google Maps
+
+Get driving route guidance
 
 Dataset includes:
 
-Bengaluru Central hospitals
+Government hospitals
 
-Contact numbers
+Private hospitals
 
-Addresses
+Bengaluru Central region coverage
 
-Coordinates
+📋 Government Health Schemes Assistant
 
-📋 5. Government Health Schemes Assistant
-
-Structured information display:
+The system provides structured information for healthcare schemes including:
 
 Description
 
@@ -131,7 +130,7 @@ Eligibility
 
 Benefits
 
-Official Source
+Official source
 
 Examples:
 
@@ -139,75 +138,75 @@ Arogya Karnataka
 
 Ayushman Bharat
 
-State schemes
+State welfare schemes
 
-System detects scheme queries and formats response cleanly.
+📞 Medical Helplines Directory
 
-📞 6. Medical Helplines Directory
+Users can access important helpline numbers:
 
-Emergency helplines
+Ambulance services
 
-National health numbers
+National health helplines
 
-Mental health support lines
+Mental health support
 
-Women and child helplines
+Women & child support lines
 
-🧠 7. AI Safety & Guardrails
+🧠 AI Safety & Guardrails
 
-The assistant follows strict medical safety rules:
+The assistant strictly follows medical safety guidelines:
 
-No diagnosis
+No disease diagnosis
 
 No medicine prescriptions
 
-Encourages doctor consultation
+Encourages professional consultation
 
-Emergency escalation when needed
+Provides clear disclaimers
 
-Clear disclaimers
+Escalates emergencies when needed
 
-⚡ Performance Improvements
+⚡ Performance Optimizations
 
-For demo readiness:
+For demo reliability and speed:
 
-Fast response fallback system (5-7 seconds)
+Fast fallback response when API is slow
 
-Reduced API delays
-
-Local response generation when API is slow
+Reduced latency (≈5–7 seconds)
 
 Optimized prompt engineering
 
-Disabled unnecessary telemetry
+Retrieval efficiency improvements
 
-Improved retrieval efficiency
+Telemetry disabled to reduce noise
+
+Stable multilingual processing
 
 🏗️ System Architecture
-                User (Web / Mobile)
-                        │
-                        ▼
-                Frontend Interface
-        (HTML + CSS + JavaScript + Voice)
-                        │
-                        ▼
-                FastAPI Backend Server
-                        │
-        ┌───────────────┼────────────────┐
-        ▼               ▼                ▼
- Emergency Engine   RAG Retrieval     Scheme Engine
-        │               │                │
-        ▼               ▼                ▼
-   Risk Detection   ChromaDB Vector   Structured Data
-                        │
-                        ▼
-                Azure OpenAI LLM
-                        │
-                        ▼
-                Safe Response Generator
-                        │
-                        ▼
-                    Frontend
+User (Web Interface)
+        │
+        ▼
+Frontend (HTML + CSS + JS + Voice)
+        │
+        ▼
+FastAPI Backend Server
+        │
+ ┌──────────────┬──────────────┬
+ ▼              ▼              ▼
+Emergency     Retrieval      Scheme
+Engine        Engine         Engine
+ │              │              │
+ ▼              ▼              ▼
+Risk Logic   ChromaDB        Structured Data
+        │
+        ▼
+Azure OpenAI (GPT Model)
+        │
+        ▼
+Safe Response Generator
+        │
+        ▼
+Frontend Output + Voice
 
 🧩 Technology Stack
 Frontend
@@ -222,7 +221,7 @@ Web Speech API
 
 Geolocation API
 
-Google Maps Navigation
+Google Maps Integration
 
 Backend
 
@@ -230,11 +229,11 @@ FastAPI
 
 Python
 
-Azure OpenAI (GPT-4.1)
+Azure OpenAI GPT-4.1
 
 ChromaDB Vector Database
 
-RAG (Retrieval Augmented Generation)
+Retrieval Augmented Generation (RAG)
 
 AI Components
 
@@ -253,14 +252,7 @@ healthcare-ai-assistant/
 │   ├── main.py
 │   ├── config.py
 │   ├── services/
-│   │   ├── rag_services.py
-│   │   ├── llm_service.py
-│   │   ├── retrieval_service.py
-│   │   ├── emergency_engine.py
-│   │   ├── language_service.py
-│   │   └── case_loader.py
 │   ├── database/
-│   │   └── chroma_client.py
 │   └── models/
 │
 ├── frontend/
@@ -272,16 +264,14 @@ healthcare-ai-assistant/
 │   ├── hospitals.js
 │   ├── style.css
 │   └── data/
-│       ├── hospitals.json
-│       └── helplines.json
 │
 └── requirements.txt
 
-🧪 How to Run Locally
+🧪 How to Run the Project
 1️⃣ Install Dependencies
 pip install -r requirements.txt
 
-2️⃣ Activate Virtual Environment
+2️⃣ Activate Environment
 .venv\Scripts\activate
 
 3️⃣ Run Backend
@@ -294,25 +284,25 @@ Open:
 frontend/index.html
 
 
-or use Live Server.
+(or use Live Server)
 
 🌍 Future Enhancements
 
 WhatsApp chatbot integration
 
-PHC appointment booking
+PHC appointment booking system
 
 Regional language expansion
 
-Offline AI model support
+Offline AI support
 
-Doctor teleconsultation
+Telemedicine integration
 
-Medical image analysis
+Health record storage
 
 ⚠️ Medical Disclaimer
 
-This system provides educational and informational guidance only.
+This system provides informational and educational guidance only.
 
 It does NOT:
 
@@ -320,7 +310,7 @@ Diagnose diseases
 
 Prescribe medications
 
-Replace professional medical consultation
+Replace medical professionals
 
 Always consult a qualified healthcare provider for medical concerns.
 
@@ -328,7 +318,7 @@ In emergencies, contact local emergency services immediately.
 
 👨‍💻 Team
 
-Developed as part of an AI healthcare innovation project.
+Developed as part of an AI Healthcare Innovation Project.
 
 Team Members:
 
