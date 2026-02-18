@@ -1,325 +1,415 @@
-🏥 SWASTHYA SETU
-Multilingual Rural Healthcare Assistant
+# 🏥 SWASTHYA SETU AI
 
-SWASTHYA SETU is a multilingual, AI-powered rural healthcare assistant designed to provide symptom-based health guidance, nearby hospital discovery, government health scheme awareness, and emergency escalation support.
+## Multilingual Rural Healthcare Assistant
 
-The system focuses on improving healthcare accessibility for rural and semi-urban populations by leveraging AI intelligence, voice interaction, and location-aware services.
+SWASTHYA SETU AI is an **AI-powered multilingual healthcare assistant** designed to provide **symptom-based medical guidance**, **government health scheme information**, **emergency detection**, **nearby hospital discovery**, and **helpline access** for rural and semi-urban populations.
 
-🎯 Problem Statement & Goals
+The system focuses on improving healthcare accessibility by leveraging **AI, Retrieval-Augmented Generation (RAG)**, **location intelligence**, and **voice interaction** to deliver safe, structured, and explainable medical responses.
 
-Rural healthcare in India faces critical challenges such as:
+---
 
-Limited doctor availability at Primary Health Centres (PHCs)
+## 🎯 Problem Statement & Goals
 
-Language barriers for non-English speakers
+Healthcare access in rural regions faces several challenges:
 
-Delayed emergency response
+* Limited doctor availability at Primary Health Centres (PHCs)
+* Language barriers for non-English speakers
+* Delayed emergency response
+* Dependence on ASHA workers for first-level triage
+* Lack of awareness about government health schemes
+* Difficulty locating nearby hospitals quickly
 
-Lack of awareness about government healthcare schemes
+SWASTHYA SETU AI aims to bridge these gaps by providing:
 
-Difficulty locating nearby hospitals quickly
+* AI-based symptom triage assistance
+* Multilingual voice interaction (English + Hindi)
+* Emergency risk detection and escalation
+* Government health scheme awareness
+* Nearby hospital navigation with maps
+* Quick access to medical helplines
+* Confidence-aware medical guidance using evidence retrieval
 
-Heavy dependence on ASHA workers for first-level care
+---
 
-SWASTHYA SETU aims to bridge these gaps by offering:
+## 🚀 Key Features
 
-Easy access to AI-based health triage
+### 🤖 AI Medical Chat Assistant
 
-Multilingual support for rural users
+* Symptom-based guidance using Retrieval-Augmented Generation (RAG)
+* Context-aware responses grounded in medical references
+* Confidence scoring with explainability
+* Guardrails to prevent unsafe medical advice
+* Fast fallback responses when API latency is high
 
-Emergency risk detection
+---
 
-Nearby hospital navigation
+### 🌍 Multilingual Support
 
-Government scheme awareness
+* Automatic language detection
+* Translation pipeline for Hindi and English
+* Voice input and female voice output support
+* Smooth speech synthesis for regional languages
 
-Safety-first medical guidance
+---
 
-🚀 Core Features
-🤖 AI Symptom Guidance Assistant
+### 🚨 Emergency Detection Engine (Improved)
 
-The chatbot accepts natural language queries and provides structured medical guidance including:
+* Detects critical symptoms like:
 
-Possible causes
+  * Chest pain
+  * Stroke indicators
+  * Unconsciousness
+  * Severe bleeding
+  * Breathing difficulty
+  * Seizures
 
-Safe home care suggestions
+* Prevents false alarms for mild symptoms (e.g., cough)
 
-When to consult a doctor
+* Overrides AI response with emergency instructions
 
-Emergency warning signs
+* Provides immediate helpline guidance
 
-Confidence score and risk level
+---
 
-The system follows strict medical safety rules to prevent misuse.
+### 🏥 Nearby Hospital Finder ⭐
 
-🗣️ Multilingual Voice Assistant
-
-The assistant supports interactive voice communication:
-
-Female voice output (English & Hindi)
-
-Speech-to-text symptom input
-
-Text-to-speech responses
-
-Talking medical avatar animation
-
-Voice ON/OFF toggle control
-
-Language switch support
-
-🚨 Smart Emergency Detection System
-
-The emergency pipeline intelligently detects high-risk situations while avoiding false alarms.
-
-Recognizes symptoms like:
-
-Chest pain
-
-Stroke indicators
-
-Unconsciousness
-
-Severe bleeding
-
-Breathing difficulty
-
-Seizures
-
-Provides:
-
-Immediate emergency guidance
-
-Ambulance contact instructions
-
-Critical risk classification
-
-🏥 Hospital Locator with Navigation ⭐
-
-One of the most impactful features of the system.
+One of the most impactful features added.
 
 Users can:
 
-Detect current GPS location
-
-Enter location manually (JP Nagar, Banashankari, etc.)
-
-Find nearest hospitals
-
-View contact details and address
-
-Navigate using Google Maps
-
-Get driving route guidance
+* Detect current GPS location
+* Enter location manually (JP Nagar, Banashankari, etc.)
+* Find nearest hospitals instantly
+* View contact details and addresses
+* Navigate via Google Maps with route guidance
 
 Dataset includes:
 
-Government hospitals
+* Government hospitals
+* Private hospitals
+* Bengaluru central region coverage
 
-Private hospitals
+---
 
-Bengaluru Central region coverage
+### 🧾 Government Health Schemes Assistant
 
-📋 Government Health Schemes Assistant
+* AI-powered scheme search (Ayushman Bharat, Arogya Karnataka, etc.)
+* Clean structured response format:
 
-The system provides structured information for healthcare schemes including:
+  * Description
+  * Eligibility
+  * Benefits
+  * Official Sources
 
-Description
+---
 
-Eligibility
+### 📞 Helpline Directory
 
-Benefits
+* Quick access to emergency healthcare numbers
+* One-tap calling interface
+* Clean responsive UI for rural accessibility
 
-Official source
+---
 
-Examples:
+### 🎤 Voice Interface
 
-Arogya Karnataka
+* Speech-to-text symptom input
+* Text-to-speech female AI doctor voice
+* Talking medical avatar animation
+* Voice ON/OFF toggle
+* Hindi pronunciation fixes implemented
 
-Ayushman Bharat
+---
 
-State welfare schemes
+### 📊 Confidence Scoring System
 
-📞 Medical Helplines Directory
+Combines:
 
-Users can access important helpline numbers:
+* Medical guideline similarity
+* Symptom pattern matches
+* Case similarity
 
-Ambulance services
+Provides transparency and trust in AI decisions.
 
-National health helplines
+---
 
-Mental health support
+## ⚡ Performance Optimizations
 
-Women & child support lines
+For demo stability and responsiveness:
 
-🧠 AI Safety & Guardrails
+* Fast fallback responses when API is slow
+* Reduced latency (~5–7 seconds)
+* Optimized prompts
+* Retrieval pipeline improvements
+* Disabled telemetry errors
+* Improved caching behavior
+* Rate-limit handling (429 retry logic)
 
-The assistant strictly follows medical safety guidelines:
+---
 
-No disease diagnosis
+## 🧠 System Architecture
 
-No medicine prescriptions
-
-Encourages professional consultation
-
-Provides clear disclaimers
-
-Escalates emergencies when needed
-
-⚡ Performance Optimizations
-
-For demo reliability and speed:
-
-Fast fallback response when API is slow
-
-Reduced latency (≈5–7 seconds)
-
-Optimized prompt engineering
-
-Retrieval efficiency improvements
-
-Telemetry disabled to reduce noise
-
-Stable multilingual processing
-
-🏗️ System Architecture
+```
 User (Web Interface)
         │
         ▼
-Frontend (HTML + CSS + JS + Voice)
+Frontend (HTML + CSS + JS + Voice + Maps)
         │
         ▼
 FastAPI Backend Server
         │
- ┌──────────────┬──────────────┬
- ▼              ▼              ▼
-Emergency     Retrieval      Scheme
-Engine        Engine         Engine
- │              │              │
- ▼              ▼              ▼
-Risk Logic   ChromaDB        Structured Data
+        ├── Emergency Detection Engine
+        │
+        ├── Language Detection & Translation
+        │
+        ├── Retrieval Engine (ChromaDB Vector Search)
+        │         │
+        │         ├── Medical Guidelines
+        │         ├── Symptom Patterns
+        │         └── Case Database
+        │
+        ├── Confidence Scoring Engine
+        │
+        ├── Hospital Location Engine
+        │
+        ├── Azure OpenAI LLM
         │
         ▼
-Azure OpenAI (GPT Model)
+Structured Safe Response
         │
         ▼
-Safe Response Generator
-        │
-        ▼
-Frontend Output + Voice
+Voice Output + UI Rendering
+```
 
-🧩 Technology Stack
-Frontend
+---
 
-HTML5
+## ⚙️ Technology Stack
 
-CSS3
+### Frontend
 
-JavaScript
+* HTML5
+* CSS3 (Animated Medical UI)
+* JavaScript
+* Web Speech API (Voice input/output)
+* Geolocation API
+* Google Maps Navigation
 
-Web Speech API
+### Backend
 
-Geolocation API
+* FastAPI
+* Python 3.11+
+* Azure OpenAI
+* ChromaDB (Vector Database)
+* Uvicorn
 
-Google Maps Integration
+### AI & NLP
 
-Backend
+* Retrieval Augmented Generation (RAG)
+* Embeddings for semantic search
+* Translation services
+* Confidence scoring algorithms
 
-FastAPI
+---
 
-Python
+## 📂 Project Structure
 
-Azure OpenAI GPT-4.1
-
-ChromaDB Vector Database
-
-Retrieval Augmented Generation (RAG)
-
-AI Components
-
-Prompt Engineering
-
-Confidence Engine
-
-Emergency Detection Pipeline
-
-Language Translation Layer
-
-📂 Project Structure
+```
 healthcare-ai-assistant/
 │
 ├── backend/
-│   ├── main.py
-│   ├── config.py
-│   ├── services/
 │   ├── database/
-│   └── models/
+│   ├── models/
+│   ├── services/
+│   ├── utils/
+│   └── main.py
 │
 ├── frontend/
+│   ├── data/
+│   │   └── hospitals.json
 │   ├── index.html
 │   ├── hospitals.html
 │   ├── schemes.html
 │   ├── helplines.html
 │   ├── app.js
 │   ├── hospitals.js
-│   ├── style.css
-│   └── data/
+│   └── style.css
 │
-└── requirements.txt
+├── chroma_db/
+├── requirements.txt
+└── README.md
+```
 
-🧪 How to Run the Project
-1️⃣ Install Dependencies
+---
+
+## 🛠️ Installation & Setup
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/yourusername/swasthya-setu-ai.git
+cd healthcare-ai-assistant
+```
+
+### 2️⃣ Create Virtual Environment
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### 3️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-2️⃣ Activate Environment
-.venv\Scripts\activate
+### 4️⃣ Configure Environment Variables
 
-3️⃣ Run Backend
-python -m uvicorn backend.main:app --reload --port 8000
+Create `.env` file:
 
-4️⃣ Run Frontend
+```
+AZURE_API_KEY=your_key
+AZURE_ENDPOINT=your_endpoint
+CHAT_DEPLOYMENT=your_model
+```
 
-Open:
+### 5️⃣ Run Backend
 
+```bash
+uvicorn backend.main:app --reload --port 8000
+```
+
+### 6️⃣ Run Frontend
+
+Use VS Code Live Server or open:
+
+```
 frontend/index.html
+```
 
+---
 
-(or use Live Server)
+## 🔗 API Endpoints
 
-🌍 Future Enhancements
+### Chat Endpoint
 
-WhatsApp chatbot integration
+```
+POST /chat
+```
 
-PHC appointment booking system
+Request:
 
-Regional language expansion
+```json
+{
+  "query": "I have fever and cough"
+}
+```
 
-Offline AI support
+Response:
 
-Telemedicine integration
+```json
+{
+  "status": "SUCCESS",
+  "risk_level": "LOW",
+  "confidence": 82,
+  "message": "Possible viral infection..."
+}
+```
 
-Health record storage
+---
 
-⚠️ Medical Disclaimer
+### Government Scheme Endpoint
 
-This system provides informational and educational guidance only.
+```
+POST /scheme
+```
 
-It does NOT:
+Request:
 
-Diagnose diseases
+```json
+{
+  "query": "Ayushman Bharat"
+}
+```
 
-Prescribe medications
+---
 
-Replace medical professionals
+## 🧪 Demo Scenarios
 
-Always consult a qualified healthcare provider for medical concerns.
+Try queries like:
 
-In emergencies, contact local emergency services immediately.
+* "I have fever and headache"
+* "Chest pain and difficulty breathing"
+* "Ayushman Bharat scheme"
+* "High sugar symptoms"
+* "Find hospitals near me"
 
-👨‍💻 Team
+Voice input also supported 🎤
 
-Developed as part of an AI Healthcare Innovation Project.
+---
 
-Team Members:
+## 🔐 Safety & Guardrails
 
-Danish Sidiq
+The system is designed with safety-first principles:
+
+* No medical diagnosis
+* No prescription recommendations
+* Emergency override priority
+* Confidence threshold enforcement
+* Verified context grounding
+
+---
+
+## 📈 Future Improvements
+
+* WhatsApp integration using Twilio
+* Doctor appointment booking
+* Offline rural deployment
+* Mobile app version
+* Real medical dataset integration
+* Real-time hospital availability
+
+---
+
+## 🏆 Hackathon Value Proposition
+
+This project demonstrates:
+
+* AI for social impact
+* Healthcare accessibility innovation
+* Responsible AI with guardrails
+* Multilingual human-AI interaction
+* End-to-end full-stack engineering
+
+---
+
+## 👨‍💻 Authors
+
+Developed by:
+
+**Danish Sidiq**
+AI / ML Engineer & Full Stack Developer
+
+---
+
+## 📜 License
+
+This project is intended for educational and research purposes.
+
+---
+
+## ⭐ Acknowledgements
+
+* Azure OpenAI
+* FastAPI Community
+* ChromaDB
+* Web Speech API
+* Government Health Resources
+
+---
+
+## ❤️ Vision
+
+> AI should not replace doctors — it should help people reach them faster.
+
+SWASTHYA SETU AI aims to empower communities with accessible healthcare intelligence.
